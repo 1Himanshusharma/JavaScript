@@ -1,0 +1,9 @@
+let a = 5;
+a += 6;
+console.log("a+=6: ",a);
+a -= 6;
+console.log("a-=b:",a);
+a **= 4;
+console.log("a**=b:",a);
+a %= 3;
+console.log("a %= 3: ",a);
