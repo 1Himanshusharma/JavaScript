@@ -68,4 +68,51 @@ const person2_array = Object.fromEntries(person_array);
 console.log("Person2_aray: ",person2_array);
 
 
-// get 
+const person_arr = Object.entries(person);
+const obj = Object.fromEntries(person_arr);
+//ager
+console.log("reverse object: ", obj);
+
+
+// Object keys // collection of keys of object as array
+console.log("person Object keys: ",Object.keys(person));
+
+
+// Object values// collection of all values
+console.log("Person Object values: ",Object.values(person));
+
+// tumhe pta hai ki discripter ek aisi chij hai jo value 
+console.log("Person Object entries: ",Object.fromEntries(person_arr));
+
+// compare objects
+//  it compare as well the type of objects
+console.log(Object.is('5',5));
+
+// is extesionable
+console.log("IS extensionable: ",Object.isExtensible(person));
+
+// Prevent extensinable
+Object.preventExtensions(person);
+// it will avoid further adding of valus to the Object
+console.log("Is extenstionable: ",Object.isExtensible(person));
+
+//prevent from adding, altering, removing, preserve everything
+//
+console.log("IS Frozen: ",Object.isFrozen(person));
+Object.freeze(person);
+console.log("Is Frozen: ",Object.isFrozen(person));
+
+
+//keys of object a array of all keys
+const key_array = Object.keys(person);
+console.log("All keys: ",Object.keys(person));
+
+//values of object a array of all values
+const value_array = Object.values(person);
+console.log("All values: ",value_array);
+
+//object seal cannot delete keys like freeze
+console.log("Is sealed",Object.isSealed(person));
+Object.seal(person)
+console.log("IS sealed: ",Object.isSealed(person));
+
