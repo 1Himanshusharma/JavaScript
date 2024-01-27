@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <tile>Display array</tile>
+    <style>
+      body{
+        padding-top:50px
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="text1"></input>
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+    <div id="Result"></div>
+  </body>
+  <script>
+    let x = 0;
+
+    // Initialize an empty array
+    let array = new Array();
+    function add_element_to_array() {
+      //get the value from the input with id text1
+      array[x] = document.getElementById("text1").value;
+      
+      //display an alert indicating the added element and its index
+      alert("Element: " + array[x] + "Added at index "+ x);
+      //Increment the index variable 'x'
+      x++;
+      // clear the value of the input with id "text1"
+      document.getElementById("text1").value = "";
+
+    }
+
+    // funcation to disp;ay the element of the array
+    function display_array(){
+      let e = "<hr/>";// initialize a string with a horizontal line
+
+      // Iterate throgh the array and create a string representation of each element
+      for (let y = 0;y < array.length;y++){
+        e += "Element" + y + " = " + array[y] + "<br/>";
+      }
+      //set the innerHTML of the element with id "result" to the generated string
+      document.getElementById("Result").innerHTML=e;
+    }
+  </script>
+</html>
